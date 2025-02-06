@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cp ./vimrc ~/.vimrc
-cp ./bashrc ~/.bashrc
+cp -f ./vimrc ~/.vimrc
+cp -f ./bashrc ~/.bashrc
 
 if [ -d "~/.config/nvim" ]; then
     echo "Neovim directory exists, continuing."
@@ -11,3 +11,5 @@ else
 fi
 
 cp ./init.lua ~/.config/nvim/init.lua
+
+source ~/.bashrc
